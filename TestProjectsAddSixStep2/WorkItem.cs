@@ -3,6 +3,11 @@
 
 namespace TestProjectsAddSixStep2;
 
+public class WorkItem : IWorkItem
+{
+
+}
+
 internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);

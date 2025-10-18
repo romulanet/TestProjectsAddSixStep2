@@ -4,10 +4,16 @@
 using TestProjectsAddSixStep2;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddScoped<IWorkItem, WorkItem>();
+builder.Host.UseDefaultServiceProvider((context, options) =>
+{
+    options.ValidateOnBuild = true;
+    options.ValidateScopes = true;
+});
 // Add services to the container.
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 
