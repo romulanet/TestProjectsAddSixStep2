@@ -1,0 +1,6 @@
+services:
+  testprojectsaddsixstep2:
+    image: ${DOCKER_REGISTRY-}testprojectsaddsixstep2
+    build:
+      context: .
+      dockerfile: TestProjectsAddSixStep2/Dockerfile
